@@ -198,3 +198,11 @@ db.movies.find({$text:{$search:"gold dragon"}})
   year: 2012,
   franchise: 'The Hobbit',
   synopsis: 'A relucant hobbit,Bilbo Baggins,sets out to the lonely Mountain with a spirited group of dwarves to reclaim their mountain home and the gold within it-from the dragon smaug' }
+
+  Delete Documents
+  
+  db.movies.remove({title:"Pee Wee Herman's Big Adventure"})
+'DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.'
+{ acknowledged: true, deletedCount: 1 }
+db.movies.remove({title:"Avatar"})
+{ acknowledged: true, deletedCount: 1 }
